@@ -41,6 +41,20 @@ public class TriangleTest
         //assert
         Assert.True(Math.Abs(expected - area) <= epsilon);
     }
+    
+    [Theory]
+    [MemberData(nameof(TriangularRightData))]
+    public void TriangularRightTest(double aSide, double bSide, double cSide, bool expected)
+    {
+        //arrange
+        var triangle = new Triangle(aSide, bSide, cSide);
+
+        //act
+        var result = triangle.IsTriangleRight();
+
+        //assert
+        Assert.Equal(expected, result);
+    }
 
     public static IEnumerable<object[]> TriangleZeroSideData()
     {
@@ -69,5 +83,16 @@ public class TriangleTest
         yield return new object[] {5, 5, 6, 0, 12};
         yield return new object[] {5, 5, 7, 1e-5, 12.4975};
         yield return new object[] {3, 4, 5, 0, 6};
+    }
+    
+    private static IEnumerable<object[]> TriangularRightData()
+    {
+        yield return new object[] {3, 4, 5, true};
+        yield return new object[] {3, 5, 4, true};
+        yield return new object[] {4, 3, 5, true};
+        yield return new object[] {4, 5, 3, true};
+        yield return new object[] {5, 3, 4, true};
+        yield return new object[] {5, 4, 3, true};
+        yield return new object[] {5, 5, 6, false};
     }
 }
