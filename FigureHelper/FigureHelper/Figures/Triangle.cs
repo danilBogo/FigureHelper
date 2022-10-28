@@ -10,6 +10,8 @@ public class Triangle : IFigure
 
     public Triangle(double aSide, double bSide, double cSide)
     {
+        if (!IsTriangleExist(aSide, bSide, cSide))
+            throw new ArgumentException("Triangle with these sides does not exists");
         _aSide = aSide;
         _bSide = bSide;
         _cSide = cSide;
@@ -17,8 +19,6 @@ public class Triangle : IFigure
 
     public double CalculateArea()
     {
-        if (!IsTriangleExist(_aSide, _bSide, _cSide))
-            throw new ArgumentException("Triangle with these sides does not exists");
         return IsTriangleRight(_aSide, _bSide, _cSide)
             ? CalculateAreaTriangleRight(_aSide, _bSide, _cSide)
             : CalculateAreaUsingHeron(_aSide, _bSide, _cSide);

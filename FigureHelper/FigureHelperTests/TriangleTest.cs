@@ -8,35 +8,24 @@ public class TriangleTest
     [MemberData(nameof(TriangleZeroSideData))]
     public void TriangleZeroSideTest(double aSide, double bSide, double cSide)
     {
-        //arrange
-        var triangle = new Triangle(aSide, bSide, cSide);
-
-        //act
-
-        //assert
-        Assert.Throws<ArgumentException>(() => triangle.CalculateArea());
+        //arrange/act/assert
+        Assert.Throws<ArgumentException>(() => new Triangle(aSide, bSide, cSide));
     }
 
     [Theory]
     [MemberData(nameof(NotExistingTriangleData))]
     public void NotExistingTriangleTest(double aSide, double bSide, double cSide)
     {
-        //arrange
-        var triangle = new Triangle(aSide, bSide, cSide);
-
-        //assert
-        Assert.Throws<ArgumentException>(() => triangle.CalculateArea());
+        //arrange/act/assert
+        Assert.Throws<ArgumentException>(() => new Triangle(aSide, bSide, cSide));
     }
 
     [Theory]
     [MemberData(nameof(TriangleNegativeSideData))]
     public void TriangleNegativeSideTest(double aSide, double bSide, double cSide)
     {
-        //arrange
-        var triangle = new Triangle(aSide, bSide, cSide);
-
-        //assert
-        Assert.Throws<ArgumentException>(() => triangle.CalculateArea());
+        //arrange/act/assert
+        Assert.Throws<ArgumentException>(() => new Triangle(aSide, bSide, cSide));
     }
 
     [Theory]

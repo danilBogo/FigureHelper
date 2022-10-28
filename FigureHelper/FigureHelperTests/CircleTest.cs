@@ -9,10 +9,9 @@ public class CircleTest
     {
         //arrange
         var radius = -1;
-        var circle = new Circle(radius);
-
-        //assert
-        Assert.Throws<ArgumentException>(() => circle.CalculateArea());
+        
+        //act/assert
+        Assert.Throws<ArgumentException>(() => new Circle(radius));
     }
     
     [Fact]

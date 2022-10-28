@@ -8,15 +8,12 @@ public class Circle : IFigure
 
     public Circle(double radius)
     {
+        if (!IsCircleExist(radius))
+            throw new ArgumentException("Circle with this radius does not exists");
         _radius = radius;
     }
-    
-    public double CalculateArea()
-    {
-        if (!IsCircleExist(_radius))
-            throw new ArgumentException("Circle with this radius does not exists");
-        return Math.PI * _radius * _radius;
-    }
+
+    public double CalculateArea() => Math.PI * _radius * _radius;
 
     private bool IsCircleExist(double radius) => radius >= 0;
 }
