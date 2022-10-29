@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureHelper", "FigureHelper\FigureHelper.csproj", "{0C5615D8-6800-4CF7-A547-178E60BBB925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureHelperTests", "FigureHelperTests\FigureHelperTests.csproj", "{A469B191-CBCE-42DD-B459-2BA8A21A1A18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C5615D8-6800-4CF7-A547-178E60BBB925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5615D8-6800-4CF7-A547-178E60BBB925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5615D8-6800-4CF7-A547-178E60BBB925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5615D8-6800-4CF7-A547-178E60BBB925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A469B191-CBCE-42DD-B459-2BA8A21A1A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A469B191-CBCE-42DD-B459-2BA8A21A1A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A469B191-CBCE-42DD-B459-2BA8A21A1A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A469B191-CBCE-42DD-B459-2BA8A21A1A18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
